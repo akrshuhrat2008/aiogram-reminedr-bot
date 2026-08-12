@@ -19,7 +19,7 @@ async def handle_health(request):
 async def start_health_check():
     app = web.Application()
     app.router.add_get("/", handle_health)
-    app.router.add_get("health", handle_health)
+    app.router.add_get("/health", handle_health)
 
     runner = web.AppRunner(app)
     await runner.setup()
