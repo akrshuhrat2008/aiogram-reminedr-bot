@@ -16,7 +16,7 @@ scheduler = AsyncIOScheduler()
 async def handle_health(request):
     return web.Response(text="OK", status=200)
 
-async def start_health_check()
+async def start_health_check():
     app = web.Application()
     app.router.add_get("/", handle_health)
     app.router.add_get("health", handle_health)
